@@ -1,5 +1,5 @@
-/home/juankmilo97/Documents/sa_students_ms/src/main/java/sa/student/resource/AuthResource.java
-/home/juankmilo97/Documents/sa_students_ms/src/main/java/sa/student/service/AuthService.java
-/home/juankmilo97/Documents/sa_students_ms/src/main/java/sa/student/model/Student.java
-/home/juankmilo97/Documents/sa_students_ms/src/main/java/sa/student/JAXRSConfiguration.java
-/home/juankmilo97/Documents/sa_students_ms/src/main/java/sa/student/service/LdapService.java
+/home/gabriel/Downloads/sa_students_ms/src/main/java/sa/student/service/AuthService.java
+/home/gabriel/Downloads/sa_students_ms/src/main/java/sa/student/model/Student.java
+/home/gabriel/Downloads/sa_students_ms/src/main/java/sa/student/JAXRSConfiguration.java
+/home/gabriel/Downloads/sa_students_ms/src/main/java/sa/student/service/LdapService.java
+/home/gabriel/Downloads/sa_students_ms/src/main/java/sa/student/resource/AuthResource.java

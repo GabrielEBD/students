@@ -14,16 +14,18 @@ public class LdapService {
             if (validateUser(user, password)) {
                 return true;
             } else {
-                return false;
+		System.out.println("usuario no valido");                
+		return false;
             }
         } else {
+	    System.out.println("no conecto con el ldap");
             return false;
         }
     }
 
     public Boolean connect() {
 
-        String ldapHost = "3.134.15.157";
+        String ldapHost = "34.69.44.104";
         String dn = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
         String password = "admin";
 
@@ -43,19 +45,25 @@ public class LdapService {
     }
 
     public Boolean validateUser(String username, String password){
-
+	System.out.println(username);
         String dn = "cn=" + username + ",ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
-        try {
+        //String dn = "cn=gebejaranod@unal.edu.co,ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
+	try {
             lc.bind(dn, password);
+	    System.out.println("valido usuario");
             return true;
         } catch (LDAPException ex) {
-            return false;
+            System.out.println("no valido usuario");
+	    return false;
         }
     }
     
     public String getData(String username){
+	System.out.println(username);
+        //String dn = "cn=gebejaranod@unal.edu.co,ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
         String dn = "cn=" + username + ",ou=academy,dc=arqsoft,dc=unal,dc=edu,dc=co";
-        LDAPEntry foundEntry = null;
+        
+	LDAPEntry foundEntry = null;
         LDAPAttribute uid = null;
         String getAttrs[] = { "uid"};
         String values[] = {};
